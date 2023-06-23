@@ -4,9 +4,9 @@ using namespace std;
 int main() {
 	int N, X, A;
 	cin >> N >> X;
-	while (N--) {
+	for (int i = 0; i < N; i++) {
 		cin >> A;
 		if (A < X)
-			cout << A << " ";
+			cout << A <<" ";
 	}
 }

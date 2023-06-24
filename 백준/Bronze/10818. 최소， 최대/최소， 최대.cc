@@ -1,21 +1,19 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
-	int n,num;
+	int n,num,a,b;
+	ios_base::sync_with_stdio(false);
+	int maxValue = -1000001;
+	int minValue = 1000001;
 	cin >> n;
-	int* arr = new int[n];
 	for (int i = 0; i < n; i++) {
 		cin >> num;
-		arr[i] = num;
+		 a = max(num, maxValue);
+		 maxValue = a;
+		 b = min(num, minValue);
+		 minValue = b;
 	}
-	int max = arr[0];
-	int min = arr[0];
-	for (int i = 0; i < n; i++) {
-		if (max < arr[i])
-			max = arr[i];
-		if (min > arr[i])
-			min = arr[i];
-	}
-	cout << min << " " << max;
+	cout << b << " " << a;
 }

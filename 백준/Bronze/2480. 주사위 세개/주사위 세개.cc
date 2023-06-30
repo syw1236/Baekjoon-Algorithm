@@ -1,29 +1,17 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
-	int num;
-	int j = 0;
-	int max = 0;
-	int arr[7]={0};
-	for (int i = 0; i < 3; i++) {
-		cin >> num;
-		if (max < num)
-			max = num;
-		arr[num]++;
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int a, b, c;
+	cin >> a >> b >> c;
+	if (a == b && b == c) cout << 10000 + (a * 1000);
+	else if ((a == b || a == c))cout << 1000 + (a * 100);
+	else if (b == c) cout << 1000 + (b * 100);
+	else {
+		int m = max({ a,b,c });
+		cout << m * 100;
 	}
-	for (j = 0; j < 7; j++) {
-		if (arr[j] == 2) {
-			cout << 1000 + (j * 100);
-			break;
-		}
-		else if (arr[j] == 3) {
-			cout << 10000 + (j * 1000);
-			break;
-		}
-	}
-	if (j == 7)
-		cout << max * 100;
-
-		
 }

@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int a[100001];
-int s[100001];
+
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-
+	int a[100001] = { 0 };
+	int s[100001] = { 0 };
 	int n, m,i,j;
 	cin >> n >> m;
 	for (int idx = 1; idx <= n; idx++) {

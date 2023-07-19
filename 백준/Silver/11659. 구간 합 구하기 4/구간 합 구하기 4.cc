@@ -5,13 +5,13 @@ using namespace std;
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	int a[100001] = { 0 };
-	int s[100001] = { 0 };
+	int s[100001] = {};
 	int n, m,i,j;
 	cin >> n >> m;
 	for (int idx = 1; idx <= n; idx++) {
-		cin >> a[idx];
-		s[idx] = s[idx-1] + a[idx];
+		int temp;
+		cin >> temp;
+		s[idx] = s[idx-1] + temp;
 	}
 	for (int idx = 0; idx < m; idx++) {
 		cin >> i >> j;
